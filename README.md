@@ -11,6 +11,8 @@
 
 Este repositório contém um exemplo de implementação de um serviço de exportação de arquivos nos formatos XML, XLSX, CSV e PDF utilizando o framework Laravel. A implementação utiliza o padrão Strategy para flexibilidade na escolha do formato de exportação.
 
+Legia o guia com o passo a passo em: [Criando um Serviço de Exportação de Arquivos em XML, XLSX, CSV e PDF no Laravel 11](https://boliveiradev.medium.com/criando-um-servi%C3%A7o-de-exporta%C3%A7%C3%A3o-de-arquivos-em-xml-xlsx-csv-e-pdf-no-laravel-11-652ea2014a06)
+
 ### Funcionalidades Implementadas:
 
 - Exportação para os formatos: XML, XLSX, CSV e PDF.
@@ -25,6 +27,7 @@ Este repositório contém um exemplo de implementação de um serviço de export
 - app/Services: Contém as classes de serviço para exportação.
 - app/Exports: Contém a classe genérica de exportação e classes específicas para cada formato.
 - config/excel.php: Arquivo de configuração do pacote Maatwebsite Excel.
+- config/exports.php: Arquivo de configuração com o mapeamento de classes para cada formato.
 - resources/views/exports/pdf.blade.php: View Blade para exportação em PDF.
 - app/Providers/ExportServiceProvider.php: Service Provider para registrar as estratégias de exportação.
 - app/Http/Controllers/ExportController.php: Controller para gerenciar a exportação de dados.
