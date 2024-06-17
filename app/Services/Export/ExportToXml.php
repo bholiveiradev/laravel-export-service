@@ -27,19 +27,11 @@ class ExportToXml implements ExportStrategy
      */
     public function export(array $data, string $filename = 'export.xml'): string
     {
-        $dataToConvert = [
-            'item' => function () use ($data) {
-                $newItems = [];
-                foreach ($data as $item) {
-                    $newItems[] = $item;
-                }
-                return $newItems;
-            },
-        ];
+        $xml = ArrayToXml::convert(['item' => $data]);
 
-        $xml = ArrayToXml::convert($dataToConvert);
-
-        Storage::put("public/{$filename}", $xml);
+        if (! Storage::put("public/{$filename}", $xml)) {
+            throw new \Exception("Failed to save XML file");
+        }
 
         return Storage::url($filename);
     }
