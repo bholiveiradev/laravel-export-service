@@ -62,6 +62,7 @@ class ExportController extends Controller
 
             $filename   = sprintf('%s.%s', 'export', $format);
             $url        = $this->exportService->export($data, $filename);
+            
             return response()->json(['url' => $url]);
         } catch (\InvalidArgumentException $e) {
             Log::error('Invalid Argument Exception', [
