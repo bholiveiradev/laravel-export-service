@@ -51,7 +51,7 @@ class ExportService
      */
     public function export(array $data, string $filename): string
     {
-        if (!$this->strategy) {
+        if (! $this->strategy) {
             throw new \Exception("Formato de exportação não definido");
         }
 
