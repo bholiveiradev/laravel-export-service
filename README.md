@@ -37,8 +37,8 @@ Legia o guia com o passo a passo em: [Criando um Serviço de Exportação de Arq
 1. Clone este repositório:
 
 ```sh
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone git@github.com:bholiveiradev/laravel-export-service.git
+cd laravel-export-service
 ```
 2. Instale as dependências do Composer:
 
